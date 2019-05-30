@@ -1,4 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.609 sec - in TestSuite
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 66.007 sec <<< FAILURE! - in TestSuite
+feature(runners.MainRunner)  Time elapsed: 21.833 sec  <<< FAILURE!
+cucumber.runtime.CucumberException: java.lang.AssertionError
+Caused by: java.lang.AssertionError
+
+feature(runners.MainRunner)  Time elapsed: 24.86 sec  <<< FAILURE!
+cucumber.runtime.CucumberException: java.lang.AssertionError
+Caused by: java.lang.AssertionError
+
+feature(runners.MainRunner)  Time elapsed: 16.119 sec  <<< FAILURE!
+cucumber.runtime.CucumberException: java.lang.AssertionError: expected:<true> but was:<false>
+Caused by: java.lang.AssertionError: expected:<true> but was:<false>
+
