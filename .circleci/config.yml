@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-  working_directory:~/CucumberFramework
+  working_directory: ~/CucumberFramework
   
   docker: # run the steps with Docker
     - image: circleci/openjdk:8-jdk-browsers
