@@ -1,7 +1,5 @@
 package stepDefinitions;
 
-import com.cucumber.listener.Reporter;
-import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -9,7 +7,6 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import utils.DriverFactory;
 
-import java.io.IOException;
 
 public class ServiceNswSteps extends DriverFactory {
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="66.007" tests="3" errors="0" skipped="0" failures="3">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="23.135" tests="1" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_111\jre\bin"/>
@@ -64,81 +64,15 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="feature" classname="runners.MainRunner" time="21.833">
-    <failure message="java.lang.AssertionError" type="cucumber.runtime.CucumberException">cucumber.runtime.CucumberException: java.lang.AssertionError
-Caused by: java.lang.AssertionError
-</failure>
+  <testcase name="feature" classname="runners.MainRunner" time="20.69">
+    <failure message="java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;" type="cucumber.runtime.CucumberException"><![CDATA[cucumber.runtime.CucumberException: java.lang.AssertionError: expected:<true> but was:<false>
+Caused by: java.lang.AssertionError: expected:<true> but was:<false>
+]]></failure>
     <system-out><![CDATA[...
 ... TestNG 6.9.10 by Cédric Beust (cedric@beust.com)
 ...
 
-Feature: Submit data to webdriveruniversity.com using contact us form
-WebElement is visible using locator: <[[ChromeDriver: chrome on XP (03f209fa279ef05e2bfdfe0c6168fe8d)] -> xpath: //input[@name='first_name']]]]><![CDATA[>
-Successfully Sent the following keys: 'Tom' to element: <[[ChromeDriver: chrome on XP (03f209fa279ef05e2bfdfe0c6168fe8d)] -> xpath: //input[@name='first_name']]]]><![CDATA[>
-WebElement is visible using locator: <[[ChromeDriver: chrome on XP (03f209fa279ef05e2bfdfe0c6168fe8d)] -> xpath: //input[@name='last_name']]]]><![CDATA[>
-Successfully Sent the following keys: 'jackson' to element: <[[ChromeDriver: chrome on XP (03f209fa279ef05e2bfdfe0c6168fe8d)] -> xpath: //input[@name='last_name']]]]><![CDATA[>
-WebElement is visible using locator: <[[ChromeDriver: chrome on XP (03f209fa279ef05e2bfdfe0c6168fe8d)] -> xpath: //input[@name='email']]]]><![CDATA[>
-Successfully Sent the following keys: 'webdriveruniversity@outlook.com' to element: <[[ChromeDriver: chrome on XP (03f209fa279ef05e2bfdfe0c6168fe8d)] -> xpath: //input[@name='email']]]]><![CDATA[>
-WebElement is visible using locator: <[[ChromeDriver: chrome on XP (03f209fa279ef05e2bfdfe0c6168fe8d)] -> xpath: //textarea[@name='message']]]]><![CDATA[>
-Successfully Sent the following keys: 'example comment two' to element: <[[ChromeDriver: chrome on XP (03f209fa279ef05e2bfdfe0c6168fe8d)] -> xpath: //textarea[@name='message']]]]><![CDATA[>
-
-  Scenario: Submit valid data via contact us form                                 # contactus.feature:3
-    Given I access webdriveruniversity contact us form                            # ContactUsSteps.i_access_webdriveruniversity_contact_us_form()
-    When I enter a valid firstname                                                # ContactUsSteps.i_enter_a_valid_firstname()
-    When I enter a valid last name                                                # ContactUsSteps.i_enter_a_valid_last_name(DataTable)
-    And i enter a valid email address                                             # ContactUsSteps.i_enter_a_valid_email_address()
-    And i enter comments                                                          # ContactUsSteps.i_enter_comments(DataTable)
-    When i click on the submit button                                             # ContactUsSteps.i_click_on_the_submit_button()
-      java.lang.AssertionError
-      	at org.junit.Assert.fail(Assert.java:86)
-      	at org.junit.Assert.fail(Assert.java:95)
-      	at pageObjects.ContactUs_Page.clickOnSubmiButton(ContactUs_Page.java:50)
-      	at stepDefinitions.ContactUsSteps.i_click_on_the_submit_button(ContactUsSteps.java:46)
-      	at ?.When i click on the submit button(contactus.feature:11)
-
-    Then the information should successfully be submitted via the contact us form # ContactUsSteps.the_information_should_successfully_be_submitted_via_the_contact_us_form()
-]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb) on port 11704
-Only local connections are allowed.
-May 30, 2019 11:29:03 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: OSS
-]]></system-err>
-  </testcase>
-  <testcase name="feature" classname="runners.MainRunner" time="24.86">
-    <failure message="java.lang.AssertionError" type="cucumber.runtime.CucumberException">cucumber.runtime.CucumberException: java.lang.AssertionError
-Caused by: java.lang.AssertionError
-</failure>
-    <system-out><![CDATA[Feature: Products page
-
-  Scenario Outline: validate promo code alert is visible when clicking on the special offers link # products.feature:3
-    Given user navigates to "<url>" website
-    When user clicks on "<button>"
-    Then user should be presented with a promo alert
-
-    Examples: 
-
-  Scenario Outline: validate promo code alert is visible when clicking on the special offers link        # products.feature:10
-    Given user navigates to "http://www.webdriveruniversity.com/Page-Object-Model/products.html" website # ProductSteps.user_navigates_to_website(String)
-    When user clicks on "#container-special-offers2"                                                     # ProductSteps.user_clicks_on(String)
-      java.lang.AssertionError
-      	at org.junit.Assert.fail(Assert.java:86)
-      	at org.junit.Assert.fail(Assert.java:95)
-      	at stepDefinitions.ProductSteps.user_clicks_on(ProductSteps.java:20)
-      	at ?.When user clicks on "#container-special-offers2"(products.feature:5)
-
-    Then user should be presented with a promo alert                                                     # ProductSteps.user_should_be_presented_with_a_promo_alert()
-]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb) on port 23582
-Only local connections are allowed.
-May 30, 2019 11:29:20 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: OSS
-]]></system-err>
-  </testcase>
-  <testcase name="feature" classname="runners.MainRunner" time="16.119">
-    <failure message="java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;" type="cucumber.runtime.CucumberException"><![CDATA[cucumber.runtime.CucumberException: java.lang.AssertionError: expected:<true> but was:<false>
-Caused by: java.lang.AssertionError: expected:<true> but was:<false>
-]]></failure>
-    <system-out><![CDATA[Feature: Submit data to Service NSW and validate it
+Feature: Submit data to Service NSW and validate it
 
   @test
   Scenario Outline: Submit valid data via Service NSW website              # service_nsw.feature:3
@@ -150,14 +84,14 @@ Caused by: java.lang.AssertionError: expected:<true> but was:<false>
     Then I click to service centre named as "Marrickville Service Centre "
 
     Examples: 
-WebElement is visible using locator: <[[ChromeDriver: chrome on XP (fd722667f25d5866b00abde5aad45c5d)] -> id: edit-contains]>
-Successfully Sent the following keys: 'Apply for a number plate' to element: <[[ChromeDriver: chrome on XP (fd722667f25d5866b00abde5aad45c5d)] -> id: edit-contains]>
+WebElement is visible using locator: <[[ChromeDriver: chrome on XP (ebd07620653bfd1741de81285ac682f9)] -> id: edit-contains]>
+Successfully Sent the following keys: 'Apply for a number plate' to element: <[[ChromeDriver: chrome on XP (ebd07620653bfd1741de81285ac682f9)] -> id: edit-contains]>
 Successfully clicked on the WebElement: <Proxy element for: DefaultElementLocator 'By.cssSelector: .locate-us-button'>
-WebElement is visible using locator: <[[ChromeDriver: chrome on XP (fd722667f25d5866b00abde5aad45c5d)] -> id: locatorTextSearch]>
-Successfully Sent the following keys: '' to element: <[[ChromeDriver: chrome on XP (fd722667f25d5866b00abde5aad45c5d)] -> id: locatorTextSearch]>
-WebElement is visible using locator: <[[ChromeDriver: chrome on XP (fd722667f25d5866b00abde5aad45c5d)] -> id: locatorTextSearch]>
-Successfully Sent the following keys: 'Sydney 2000' to element: <[[ChromeDriver: chrome on XP (fd722667f25d5866b00abde5aad45c5d)] -> id: locatorTextSearch]>
-Successfully clicked on the WebElement: <[[ChromeDriver: chrome on XP (fd722667f25d5866b00abde5aad45c5d)] -> css selector: .form__actions]>
+WebElement is visible using locator: <[[ChromeDriver: chrome on XP (ebd07620653bfd1741de81285ac682f9)] -> id: locatorTextSearch]>
+Successfully Sent the following keys: '' to element: <[[ChromeDriver: chrome on XP (ebd07620653bfd1741de81285ac682f9)] -> id: locatorTextSearch]>
+WebElement is visible using locator: <[[ChromeDriver: chrome on XP (ebd07620653bfd1741de81285ac682f9)] -> id: locatorTextSearch]>
+Successfully Sent the following keys: 'Sydney 2000' to element: <[[ChromeDriver: chrome on XP (ebd07620653bfd1741de81285ac682f9)] -> id: locatorTextSearch]>
+Successfully clicked on the WebElement: <[[ChromeDriver: chrome on XP (ebd07620653bfd1741de81285ac682f9)] -> css selector: .form__actions]>
 I am here
 false
 
@@ -178,9 +112,9 @@ false
       	at ?.Then I click to service centre named as "Marrickville Service Centre "(service_nsw.feature:9)
 
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb) on port 12119
+    <system-err><![CDATA[Starting ChromeDriver 2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb) on port 36892
 Only local connections are allowed.
-May 30, 2019 11:29:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Jun 04, 2019 12:18:44 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: OSS
 ]]></system-err>
   </testcase>

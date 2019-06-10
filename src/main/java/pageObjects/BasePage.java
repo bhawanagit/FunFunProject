@@ -42,7 +42,7 @@ public class BasePage extends DriverFactory {
 	}
 
 	/**********************************************************************************
-	 **CLICK METHODS
+	 **CLICK METHODSgetDriver
 	 * @throws IOException 
 	 **********************************************************************************/
 	public void waitAndClickElement(WebElement element) throws InterruptedException, IOException {
